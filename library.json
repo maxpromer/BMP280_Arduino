@@ -1,0 +1,16 @@
+{
+  "name" : "BMP280",
+  "title": "BMP280 Pressure Sensor",
+  "category" : "Sensors",
+  "keywords": "pressure, pressure sensor",
+  "description": "BMP280 Digital Pressure Sensor",
+  "homepage": "https://github.com/maxpromer/BMP280_Arduino",
+  "license": "MIT",
+  "git": "https://github.com/maxpromer/BMP280_Arduino",
+  "author": "INEX",
+  "url": "https://www.inex.co.th/",
+  "version": "1.0.0",
+  "board" : "",
+  "platform": ["arduino-avr","arduino-esp32"],
+  "image" : "/static/display.jpg"
+}
