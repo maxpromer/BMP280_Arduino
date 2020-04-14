@@ -23,13 +23,11 @@ Blockly.JavaScript['bmp280_begin'] = function(block) {
 };
 
 Blockly.JavaScript['bmp280_read_temperature'] = function(block) {
-	var dropdown_addr = block.getFieldValue('addr');
 	var code = 'bmp.readTemperature()';
 	return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
 Blockly.JavaScript['bmp280_read_pressure'] = function(block) {
-	var dropdown_addr = block.getFieldValue('addr');
 	var code = 'bmp.readPressure()';
 	return [code, Blockly.JavaScript.ORDER_NONE];
 };
