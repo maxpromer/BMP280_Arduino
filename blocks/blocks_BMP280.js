@@ -16,7 +16,7 @@ Blockly.Blocks['bmp280_read_temperature'] = {
 	init: function() {
 		this.jsonInit({
 			"type": "bmp280_read_temperature",
-			"message0": "BMP280 read temperature",
+			"message0": "BMP280 read temperature (*C)",
 			"output": "Number",
 			"colour": 135,
 			"tooltip": "Read Temperature from BMP280",
@@ -29,7 +29,7 @@ Blockly.Blocks['bmp280_read_pressure'] = {
 	init: function() {
 		this.jsonInit({
 			"type": "bmp280_read_pressure",
-			"message0": "BMP280 read pressure",
+			"message0": "BMP280 read pressure (Pa)",
 			"output": "Number",
 			"colour": 135,
 			"tooltip": "Read Pressure from BMP280",

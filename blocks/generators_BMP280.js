@@ -13,12 +13,17 @@ Blockly.JavaScript['bmp280_begin'] = function(block) {
 	}
 
 	var code = '';
-	code += '#EXTINC#include <BMP280_Arduino.h>#END\n';
+	code += '#EXTINC#include <Adafruit_BMP280.h>#END\n';
 	code += '#EXTINC#include <Wire.h>#END\n';
-	code += '#VARIABLE BMP280 bmp(' + dropdown_address + ', &' + WIRE_OBJ + ');#END\n';
+	code += '#VARIABLE Adafruit_BMP280 bmp(&' + WIRE_OBJ + ');#END\n';
 	code += '\n';
-	code += WIRE_OBJ + '.begin(' + SDA_PIN + ', ' + SCL_PIN + ');\n';
-	code += 'bmp.begin();\n';
+	code += '#SETUP ' + WIRE_OBJ + '.begin(' + SDA_PIN + ', ' + SCL_PIN + '); #END\n';
+	code += '#SETUP bmp.begin(' + dropdown_address + '); #END\n';
+	code += '#SETUP bmp.setSampling(Adafruit_BMP280::MODE_NORMAL,     /* Operating Mode. */\n';
+    code += '      Adafruit_BMP280::SAMPLING_X2,     /* Temp. oversampling */\n';
+    code += '      Adafruit_BMP280::SAMPLING_X16,    /* Pressure oversampling */\n';
+    code += '      Adafruit_BMP280::FILTER_X16,      /* Filtering. */\n';
+    code += '      Adafruit_BMP280::STANDBY_MS_500); /* Standby time. */\n #END';
 	return code;
 };
 
