@@ -39,3 +39,10 @@ Blockly.JavaScript['bmp280_read_pressure'] = function(block) {
 	return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
+Blockly.JavaScript['bmp280_read_altitude'] = function(block) {
+	var dropdown_address = block.getFieldValue('addr');
+	var number_sealevelhpa = block.getFieldValue('seaLevelhPa');
+	var code = Blockly.JavaScript['bmp280_begin'](block) + 'bmp' + dropdown_address + '.readAltitude(' + number_sealevelhpa + ')';
+	return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
